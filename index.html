@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Tunnel Wash Report</h2>
+    <div class="div-main">
+      <div class="main">
+        <div class="main-box">
+          <input type="text" placeholder="Name" id="workerName" />
+          <input type="date" id="date" />
+          <!-- <input type="text" placeholder="Cash tunnel hand" id="cash"> -->
+          <input type="number" placeholder="Credit Card" id="credit" />
+          <input type="number" placeholder="Wash Key" id="wash" />
+          <input type="number" placeholder="No Change" id="change" />
+          <input type="number" placeholder="Wash pass" id="washpass" />
+          <input type="number" placeholder="Wash pilot Total" id="washpilot" />
+          <input
+            type="number"
+            placeholder="Starting Amout"
+            id="starting-amount"
+          />
+          
+        </div>
+        <div class="change">
+          <h4>Cash Amount</h4>
+          <input type="number" placeholder="Ones" id="ones" />
+          <input type="number" placeholder="Fives" id="fives" />
+          <input type="number" placeholder="Tens" id="tens" />
+          <input type="number" placeholder="Twenties" id="twenties" />
+          <input type="number" placeholder="Fifties" id="fifties" />
+          <input type="number" placeholder="One Hundreds" id="hundred" />
+        </div>
+      </div>
+      <button class="submit" onclick="calculate()">Submit</button>
+      <h2 id="total-text" class="total-text"></h2>
+      <h3 id="difference" class="total-text"></h3>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
