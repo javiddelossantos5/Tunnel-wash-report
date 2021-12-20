@@ -30,7 +30,24 @@ function calculate() {
   console.log(startingAmount);
 
 
-    const cashTotal = Number(ones.value) + Number(fives.value) + Number(tens.value) + Number(twenties.value) + Number(fifties.value) + Number(hundred.value);
+  const oneValue = ones.value * 1
+  const fivesValue = fives.value * 5
+  const tensValue = tens.value * 10
+  const twentiesValue = twenties.value * 20
+  const fiftiesValue = fifties.value * 50
+  const hundredValue = hundred.value * 100
+
+
+
+    const cashTotal = Number(oneValue) + Number(fivesValue) + Number(tensValue) + Number(twentiesValue) + Number(fiftiesValue) + Number(hundredValue);
+
+    // console.log(oneValue);
+    // console.log(fivesValue);
+    // console.log(tensValue);
+    // console.log(twentiesValue);
+    // console.log(fiftiesValue);
+    // console.log(hundredValue);
+
 
 
     console.log(cashTotal);
