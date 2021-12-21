@@ -59,7 +59,6 @@ button {
     flex-direction: column;
     text-align: center;
     margin-bottom: 30px;
-    flex-basis: fit-content;
 }
 
 .no-charge-box {
