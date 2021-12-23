@@ -1,12 +1,14 @@
 function calculate() {
-  const workerName = document.getElementById('workerName').value;
+  const workerName1 = document.getElementById('workerName1').value;
+  const workerName2 = document.getElementById('workerName2').value;
+  const amountOfCars = document.getElementById('amountOfCars').value;
   const dateOfDay = document.getElementById('date').value;
   const creditCard = document.getElementById('credit').value;
   const washKey = document.getElementById('wash').value;
   const washPass = document.getElementById('washpass').value;
   const washPilot = document.getElementById('washpilot').value;
   const startingAmount = document.getElementById('starting-amount').value;
-  const totalText = document.getElementById('total-text');
+  const totalText = document.getElementsByClassName('total-text');
   const difference = document.getElementById('difference');
 
   const ones = document.getElementById('ones');
@@ -85,8 +87,9 @@ function calculate() {
   totalText.innerHTML = Number(total);
 
   if (total === 0) {
-    difference.innerHTML = `Good Job ${workerName} Perfect 0`;
+    difference.innerHTML = `Good Job ${workerName1} and ${workerName2} Perfect 0`;
   } else {
-    difference.innerHTML = `${workerName} the amount is off ${total} dollars`;
+    difference.innerHTML = `${workerName1} and ${workerName2} the amount is off ${total} dollars with ${amountOfCars} cars for the day`;
   }
+  
 }
