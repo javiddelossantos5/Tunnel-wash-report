@@ -84,7 +84,7 @@ function calculate() {
   const total = Number(washPilot) - Number(totalOfAddition);
   console.log(total);
 
-  totalText.innerHTML = Number(total);
+  // totalText.innerHTML = Number(total);
 
   if (total === 0) {
     difference.innerHTML = `Good Job ${workerName1} and ${workerName2} Perfect 0`;
