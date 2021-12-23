@@ -8,7 +8,7 @@ function calculate() {
   const washPass = document.getElementById('washpass').value;
   const washPilot = document.getElementById('washpilot').value;
   const startingAmount = document.getElementById('starting-amount').value;
-  const totalText = document.getElementsByClassName('total-text');
+  const totalText = document.getElementById('total-text');
   const difference = document.getElementById('difference');
 
   const ones = document.getElementById('ones');
@@ -81,10 +81,11 @@ function calculate() {
 
   const totalOfAddition = Number(totalOfTheDay) - Number(startingAmount);
 
-  const total = Number(washPilot) - Number(totalOfAddition);
+  const total = Number(totalOfAddition) - Number(washPilot);
   console.log(total);
 
   // totalText.innerHTML = Number(total);
+
 
   if (total === 0) {
     difference.innerHTML = `Good Job ${workerName1} and ${workerName2} Perfect 0`;
