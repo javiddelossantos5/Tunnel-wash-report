@@ -1,5 +1,5 @@
 function calculate() {
-  const workerName1 = document.getElementById('workerName1').value;
+  let workerName1 = document.getElementById('workerName1').value;
   const workerName2 = document.getElementById('workerName2').value;
   const amountOfCars = document.getElementById('amountOfCars').value;
   const dateOfDay = document.getElementById('date').value;
@@ -11,12 +11,12 @@ function calculate() {
   const totalText = document.getElementById('total-text');
   const difference = document.getElementById('difference');
 
-  const ones = document.getElementById('ones');
-  const fives = document.getElementById('fives');
-  const tens = document.getElementById('tens');
-  const twenties = document.getElementById('twenties');
-  const fifties = document.getElementById('fifties');
-  const hundred = document.getElementById('hundred');
+  const ones = document.getElementById('ones').value * 1;
+  const fives = document.getElementById('fives').value * 5;
+  const tens = document.getElementById('tens').value * 10;
+  const twenties = document.getElementById('twenties').value * 20;
+  const fifties = document.getElementById('fifties').value * 50;
+  const hundred = document.getElementById('hundred').value * 100;
 
   const testWash11 = document.getElementById('testWash11').value * 11;
   const testWash14 = document.getElementById('testWash14').value * 14;
@@ -57,20 +57,13 @@ function calculate() {
     Number(employeeTotal) +
     Number(refundTotal);
 
-  const oneValue = ones.value * 1;
-  const fivesValue = fives.value * 5;
-  const tensValue = tens.value * 10;
-  const twentiesValue = twenties.value * 20;
-  const fiftiesValue = fifties.value * 50;
-  const hundredValue = hundred.value * 100;
-
   const cashTotal =
-    Number(oneValue) +
-    Number(fivesValue) +
-    Number(tensValue) +
-    Number(twentiesValue) +
-    Number(fiftiesValue) +
-    Number(hundredValue);
+    Number(ones) +
+    Number(fives) +
+    Number(tens) +
+    Number(twenties) +
+    Number(fifties) +
+    Number(hundred);
 
   const totalOfTheDay =
     Number(cashTotal) +
@@ -84,13 +77,11 @@ function calculate() {
   const total = Number(totalOfAddition) - Number(washPilot);
   console.log(total);
 
-  // totalText.innerHTML = Number(total);
-
+  console.log(workerName1);
 
   if (total === 0) {
-    difference.innerHTML = `Good Job ${workerName1} and ${workerName2} Perfect 0`;
+    difference.innerHTML = `Good Job ${workerName1} and ${workerName2} Perfect 0 out of ${amountOfCars} cars`;
   } else {
     difference.innerHTML = `${workerName1} and ${workerName2} the amount is off ${total} dollars with ${amountOfCars} cars for the day`;
   }
-  
 }
