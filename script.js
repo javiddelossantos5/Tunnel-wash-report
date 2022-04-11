@@ -1,6 +1,6 @@
 function calculate() {
-  let workerName1 = document.getElementById('workerName1').value;
-  const workerName2 = document.getElementById('workerName2').value;
+  let workerName1 = document.getElementById('workerName1').value.toLowerCase();
+  let workerName2 = document.getElementById('workerName2').value.toLowerCase();
   const amountOfCars = document.getElementById('amountOfCars').value;
   const dateOfDay = document.getElementById('date').value;
   const creditCard = document.getElementById('credit').value;
@@ -77,7 +77,15 @@ function calculate() {
   const total = Number(totalOfAddition) - Number(washPilot);
   console.log(total);
 
-  console.log(workerName1);
+  if(workerName1 === 'alex') {
+    workerName1 = workerName1.innerHTML = 'alex is gay'
+    console.log(workerName1);
+  }
+
+  if(workerName2 === 'alex') {
+    workerName2 = workerName2.innerHTML = 'alex is gay'
+    console.log(workerName2);
+  }
 
   if (total === 0) {
     difference.innerHTML = `Good Job ${workerName1} and ${workerName2} Perfect 0 out of ${amountOfCars} cars`;
