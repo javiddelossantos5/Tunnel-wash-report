@@ -77,15 +77,6 @@ function calculate() {
   const total = Number(totalOfAddition) - Number(washPilot);
   console.log(total);
 
-  if(workerName1 === 'alex') {
-    workerName1 = workerName1.innerHTML = 'alex is gay'
-    console.log(workerName1);
-  }
-
-  if(workerName2 === 'alex') {
-    workerName2 = workerName2.innerHTML = 'alex is gay'
-    console.log(workerName2);
-  }
 
   if (total === 0) {
     difference.innerHTML = `Good Job ${workerName1} and ${workerName2} Perfect 0 out of ${amountOfCars} cars`;
